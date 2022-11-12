@@ -1,0 +1,29 @@
+@import "scss/variables/colors";
+@import "scss";
+
+.App {
+  text-align: center;
+}
+
+.appHeader {
+  background-color: $monochrome-grey20;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: white;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  margin: 80px auto;
+
+  @include md-up {
+    flex-direction: row;
+  }
+}

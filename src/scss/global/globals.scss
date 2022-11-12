@@ -1,0 +1,6 @@
+html {
+  &.noscroll {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
