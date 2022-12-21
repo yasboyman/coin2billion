@@ -1,10 +1,16 @@
 import React from "react";
-// @ts-ignore
-import { render, screen } from '@testing-library/react'
+import {render, screen} from "@testing-library/react";
 import App from "./App";
 
-test("renders learn react link", () => {
-  render(<App />);
-  const linkElement = screen.getByText('billion');
-  expect(linkElement).toBeInTheDocument();
+
+test('check if text is on the screen', () => {
+    render(<App />);
+    const textOnPage = screen.getByText('Enter start and end destination and we will let you know dwag')
+    expect(textOnPage).toBeInTheDocument()
+})
+
+test("renders two input boxes", () => {
+    render(<App />);
+    const inputElement = screen.getByLabelText('first input')
+    expect(inputElement).toBeInTheDocument();
 });
