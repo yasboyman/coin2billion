@@ -22,11 +22,12 @@ const App: FC = () => {
         results: { geometry: { location: { lat: any; lng: any } } }[];
       }) => {
         const { lat, lng } = response.results[0].geometry.location;
-        console.log('this is the response',response)
+        console.log("this is the response", response);
         console.log("FUNCTION CALLED");
         callback({
-            latitude: lat,
-            longitude: lng});
+          latitude: lat,
+          longitude: lng,
+        });
       },
       (error: any) => {
         // Add react error here later //
@@ -37,14 +38,8 @@ const App: FC = () => {
   useEffect(() => {
     const grabBoth = async () => {
       try {
-        const firstResponse = await getFirstLongLat(
-          firstValue.toLowerCase(),
-          setFirstCoordinates
-        );
-        const secondResponse = await getFirstLongLat(
-          secondValue.toLowerCase(),
-            setSecondCoordinates
-        );
+        await getFirstLongLat(firstValue.toLowerCase(), setFirstCoordinates);
+        await getFirstLongLat(secondValue.toLowerCase(), setSecondCoordinates);
       } catch (error) {
         return error;
       }
