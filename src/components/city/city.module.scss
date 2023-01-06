@@ -1,0 +1,15 @@
+.cityBtn {
+  border: solid 1px rgba(0, 0, 0, 0.37);
+  padding: 10px 5px;
+  border-radius: 4px;
+  //background-color: lightgreen;
+
+  &:hover {
+    background: linear-gradient(to top, #556B2F86 4px, transparent 0);
+    font-size: small
+  }
+  &.active {
+    background: rgba(85, 107, 47, 0.68);
+    color: whitesmoke;
+  }
+}
